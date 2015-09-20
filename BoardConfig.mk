@@ -27,6 +27,7 @@ TARGET_CPU_VARIANT := krait
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/sony/msm8x60
 TARGET_KERNEL_CONFIG := cm_viskan_huashan_defconfig
+ROM_OPTIS := true
 
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
