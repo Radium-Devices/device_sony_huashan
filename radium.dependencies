@@ -3,12 +3,14 @@
   {
     "repository": "Mrcl1450/android_hardware_sony_thermanager",
     "target_path": "hardware/sony/thermanager",
-    "revision":      "cm-12.1"
+    "revision":      "cm-12.1",
+    "remote": "github"
   },
   {
     "repository": "AdrianDC/android_kernel_sony_msm8x60",
     "target_path": "kernel/sony/msm8x60",
-    "revision":      "cm-12.1"
+    "revision":      "cm-12.1_clean",
+    "remote": "github"
   },
   {
     "repository": "android_hardware_qcom_fm",
@@ -31,6 +33,7 @@
   {
     "repository": "AdrianDC/proprietary_vendor_sony",
     "target_path": "vendor/sony",
-    "revision":      "cm-12.1_clean"
+    "revision":      "cm-12.1_clean",
+    "remote": "github"
   }
 ]
