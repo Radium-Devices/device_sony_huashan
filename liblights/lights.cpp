@@ -42,6 +42,10 @@
 #endif
 
 /* === Module Constants === */
+<<<<<<< HEAD
+=======
+#define LEDS_WITNESS_MODE 1
+>>>>>>> 5f4d4d91b121dd7398fb19a47ad765ee7bb5bd4d
 #define LIGHT_BRIGHTNESS_MAXIMUM 0xFF
 #define MAX_PATH_SIZE 80
 enum leds_state { LEDS_OFF, LEDS_NOTIFICATIONS, LEDS_BATTERY };
@@ -333,7 +337,10 @@ set_light_leds_locked(struct light_device_t* dev,
 
     int i, c;
     int flashMode;
+<<<<<<< HEAD
     int leds_modes;
+=======
+>>>>>>> 5f4d4d91b121dd7398fb19a47ad765ee7bb5bd4d
     int leds_rgb_update;
     int leds_unit_minid;
     int leds_unit_maxid;
@@ -346,7 +353,10 @@ set_light_leds_locked(struct light_device_t* dev,
 
     /* LEDs variables processing */
     leds_brightness = (state->color & 0xFF000000) >> 24;
+<<<<<<< HEAD
     leds_modes = state->ledsModes;
+=======
+>>>>>>> 5f4d4d91b121dd7398fb19a47ad765ee7bb5bd4d
     leds_unit_minid = 1;
     leds_unit_maxid = LEDS_UNIT_COUNT;
     delayOn = state->flashOnMS;
@@ -363,8 +373,13 @@ set_light_leds_locked(struct light_device_t* dev,
         flashMode = LIGHT_FLASH_NONE;
     }
 
+<<<<<<< HEAD
     /* Use multiple LEDs */
     if (leds_modes & LIGHT_MODE_MULTIPLE_LEDS) {
+=======
+    /* Allow the witness mode, replaced in future commit with Multiple LEDs */
+    if (LEDS_WITNESS_MODE) {
+>>>>>>> 5f4d4d91b121dd7398fb19a47ad765ee7bb5bd4d
 
         /* LEDs charging witness mode */
         if (is_lit(&g_battery)) {
@@ -402,6 +417,7 @@ set_light_leds_locked(struct light_device_t* dev,
             }
         }
     }
+<<<<<<< HEAD
     /* Use single LED */
     else {
         unsigned int led_rgb_off[3] = {0,0,0};
@@ -414,6 +430,8 @@ set_light_leds_locked(struct light_device_t* dev,
         set_light_leds_program(LEDS_PROGRAM_KEEP, LEDS_SEQ_BLINK_NONE,
                 flashMode, 0, 0);
     }
+=======
+>>>>>>> 5f4d4d91b121dd7398fb19a47ad765ee7bb5bd4d
 
     /* Detection of the delays update */
     if (flashMode == LIGHT_FLASH_TIMED &&
@@ -472,7 +490,11 @@ set_light_leds_locked(struct light_device_t* dev,
             "Update : %d/%d - Brightness : %d - LEDs Mode : %d - "
             "Mode : %d (Not. 1 / Bat. 2)\n",
             led_rgb[0], led_rgb[1], led_rgb[2], delayOn, delayOff, flashMode,
+<<<<<<< HEAD
             leds_rgb_update, leds_program_update, leds_brightness, leds_modes,
+=======
+            leds_rgb_update, leds_program_update, leds_brightness, 1,
+>>>>>>> 5f4d4d91b121dd7398fb19a47ad765ee7bb5bd4d
             g_leds_state);
     (void)dev;
     return 0;
